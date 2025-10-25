@@ -11,8 +11,11 @@ export default function MainApp({ session }) {
   const [currentPage, setCurrentPage] = useState('dashboard')
 
   const handleSignOut = async () => {
-    await supabase.auth.signOut()
-    window.location.reload()
+    try {
+      await supabase.auth.signOut()
+    } catch (error) {
+      console.error('Error signing out:', error)
+    }
   }
 
   const renderPage = () => {
