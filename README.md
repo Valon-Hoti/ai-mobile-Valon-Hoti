@@ -2,7 +2,7 @@
 
 **UniTrack** është një aplikacion web modern për menaxhimin e studimeve, i dizajnuar për të ndihmuar studentët të organizojnë më mirë orarin, provimet dhe detyrat e tyre.
 
-![UniTrack](https://img.shields.io/badge/React-18.3-blue) ![Vite](https://img.shields.io/badge/Vite-7.1-purple) ![Supabase](https://img.shields.io/badge/Supabase-Auth%20%26%20DB-green)
+
 
 ## ✨ Karakteristikat Kryesore
 
