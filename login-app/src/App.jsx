@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import Auth from "./components/Auth";
-import Home from "./components/Home";
+import MainApp from "./components/MainApp";
 import "./App.css";
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="app">
-      {!session ? <Auth /> : <Home session={session} />}
+      {!session ? <Auth /> : <MainApp session={session} />}
     </div>
   );
 }
