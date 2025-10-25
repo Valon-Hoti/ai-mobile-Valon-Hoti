@@ -78,4 +78,4 @@ Aplikacioni eshte funksional dhe gati per perdorim. Te gjitha features kryesore 
 - Mobile-responsive design
 - Filtrimi dhe kerkimi i te dhenave
 
-Per te perdorur aplikacionin duhet te konfigurosh Supabase credentials ne environment variables (SUPABASE_URL dhe SUPABASE_ANON_KEY) dhe te ekzekutosh SQL queries nga SUPABASE_SETUP.md per te krijuar tabelat.
+

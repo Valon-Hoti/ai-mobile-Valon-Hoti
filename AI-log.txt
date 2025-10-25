@@ -95,6 +95,13 @@ server: {
 
 
 🧠 Prompt 6:
+"kam nje kerkes per nje ndryshim, teksti ne faqen kryesore ne dashboard: Mirë se vjen në UniTrack! 🎓
+Organizoni dhe menaxhoni studimet tuaja. nuk po shihet mir besoj per shkak te ngjyrave beje  qe te duket me mir po ashtu edhe ne faqen njoftimet, teksti: Njoftimet 🔔
+Sistemi juaj i alertave automatike për afatet e rëndësishme. mos ndryshi gje tjeter perveq ketyre"
+
+-Ketu i kerkova agjentit te ndryshoje pamjen e disa teksteve ne aplikacion dhe ai i ndyshoi.
+
+
 
    
 
