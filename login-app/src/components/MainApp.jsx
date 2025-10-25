@@ -12,6 +12,7 @@ export default function MainApp({ session }) {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut()
+    window.location.reload()
   }
 
   const renderPage = () => {
