@@ -1,0 +1,88 @@
+Prompt 1: Generate a Flutter login screen (email + password) using supabase_flutter auth.
+
+Qëllimi:
+Ky prompt kërkon ndërtimin e një ekrani login në Flutter që përdor Supabase për autentikim me email dhe fjalëkalim.
+Supabase është një platformë “open source backend-as-a-service” që ofron autentikim, database, dhe API të integruara.
+Kjo zgjidhje përdor paketën `supabase_flutter` për lidhjen me Supabase.
+
+Përshkrimi i zgjidhjes:
+- Krijohet një formë me dy fusha (`TextField` për email dhe password).
+- Butoni “Sign In” thërret metodën `signInWithPassword()` nga `Supabase.instance.client.auth`.
+- Në rast suksesi, përdoruesi log-in me sukses dhe ruhet sesioni aktiv.
+- Në rast gabimi, shfaqet mesazhi përmes `SnackBar`.
+
+Paketat e përdorura:
+- supabase_flutter: për komunikim me backend-in Supabase.
+- flutter/material.dart: për UI bazik të Flutter.
+
+Struktura e projektit:
+- main.dart → inicializon Supabase dhe starton app-in.
+- login_screen.dart → përmban UI dhe logjikën e hyrjes (login).
+
+Parakushtet:
+- Krijo një projekt Flutter me `flutter create`.
+- Shto paketën me `flutter pub add supabase_flutter`.
+- Inicializo Supabase me `Supabase.initialize(url, anonKey)`.
+
+Rezultati i pritur:
+Një ekran funksional login ku përdoruesi mund të fusë email-in dhe fjalëkalimin, dhe të autentikohet në Supabase.
+
+Dokumentacion shtesë:
+- https://supabase.com/docs/guides/auth/quickstarts/flutter
+- https://pub.dev/packages/supabase_flutter
+
+
+🧠 Prompt 2:
+"The app is running, but has no external ports configured. Use networking tool to configure them."
+
+🎯 Qëllimi:
+Ky mesazh shfaqet në Replit kur aplikacioni është duke u ekzekutuar me sukses, por asnjë port nuk është i konfiguruar për t’u hapur publikisht.  
+Replit kërkon që porta (p.sh. 5173, 3000, 8000, etj.) të ekspozohet për të lejuar aksesin nga jashtë në aplikacionin që po ekzekutohet.
+
+⚙️ Shpjegimi teknik:
+- Çdo aplikacion në Replit ekzekutohet brenda një konteineri që nuk ka porta të hapura nga jashtë për arsye sigurie.
+- Për të parë aplikacionin në browser ose për të komunikuar me të, duhet të konfigurohet porti i duhur për “public access”.
+
+🛠️ Zgjidhja:
+1. Në Replit, hap panelin anësor dhe shko te seksioni **Networking** (ose “Ports”).
+2. Kliko **Add new port** dhe vendos portin që aplikacioni përdor, për shembull:
+
+5173 → për Vite / React / Flutter Web dev server
+3000 → për Node.js / Express
+8000 → për Python / FastAPI / Django
+
+3. Vendose si **Public** që të jetë i aksesueshëm jashtë Replit.
+
+
+🧠 Prompt 4:
+"White screen when running the app"
+
+🎯 Qëllimi:
+Ky problem ndodh kur aplikacioni ekzekutohet pa errorë në terminal, por në shfletues shfaqet vetëm një ekran i bardhë.  
+Zakonisht kjo ndodh për shkak të një gabimi në kodin frontend (p.sh. React ose Flutter Web) ose mungesës së inicializimeve të nevojshme.
+
+⚙️ Shpjegimi teknik:
+- Një “white screen” do të thotë që aplikacioni është ngarkuar, por ka ndodhur një **JavaScript error** gjatë ekzekutimit.
+- Më shpesh shkaktohet nga:  
+  • mungesa e importit të React (`React is not defined`)  
+  • path të gabuara për skedarët  
+  • probleme me konfigurimin e host-it ose portit  
+  • gabime në `vite.config.js` ose inicializimin e Supabase/Flutter
+
+🛠️ Zgjidhja:
+1. Hap **DevTools → Console** në shfletues dhe kontrollo për gabime si:
+
+Uncaught ReferenceError: React is not defined
+
+ose ndonjë `404` për skedarë të munguar.
+2. Nëse përdor React, sigurohu që në çdo file me JSX të kesh:
+```js
+import React from 'react';
+
+ose në vite.config.js të jetë aktivizuar jsxRuntime: 'automatic'.
+3. Kontrollo që serveri është konfiguruar me host 0.0.0.0 për akses publik:
+
+server: {
+  host: '0.0.0.0',
+  port: 5173,
+},
