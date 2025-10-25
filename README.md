@@ -2,84 +2,80 @@
 
 **Autori:** Valon Hoti
 
-## Përshkrimi i Projektit
+## Pershkrimi i Projektit
 
-UniTrack është një aplikacion web që kam ndërtuar për të ndihmuar studentët të organizojnë më mirë studimet e tyre. Aplikacioni mundëson menaxhimin e lëndëve, detyrave, provimeve dhe orarit javor në një vend të vetëm. Gjithashtu ofron një sistem njoftimesh që të lajmëron për afatet që po afrojnë.
+UniTrack eshte nje aplikacion web qe e kam bere per te ndihmuar studentet te organizojne me mire studimet. Aplikacioni mundeson menaxhimin e lendeve, detyrave, provimeve dhe orarit javor ne nje vend. Gjithashtu ka nje sistem njoftimesh qe te lajmeron per afatet qe po afrojne.
 
-## Teknologjitë e Përdorura
+## Teknologjite e Perdorura
 
-- **React 18** - Frontend framework
-- **Vite** - Build tool dhe dev server
-- **Supabase** - Authentication dhe PostgreSQL database
-- **Custom CSS** - Styling me mobile-first approach
+- React 18 - Frontend framework
+- Vite - Build tool dhe dev server
+- Supabase - Authentication dhe PostgreSQL database
+- Custom CSS - Styling me mobile-first approach
 
 ## Funksionaliteti Kryesor
 
 **Dashboard**
-- Shfaq statistika për detyrat (totale, të përfunduara, afatet që afrojnë)
-- Lista e detyrave dhe provimeve që po afrojnë
-- Quick navigation për seksionet e tjera
+- Statistika per detyrat (totale, te perfunduara, afatet qe afrojne)
+- Lista e detyrave dhe provimeve qe po afrojne
+- Quick navigation per seksionet e tjera
 
-**Menaxhimi i Lëndëve**
-- Shtimi, modifikimi dhe fshirja e lëndëve
-- Zgjedhja e ngjyrave për organizim më të mirë
-- Ruajtja e emrit të profesorit
+**Menaxhimi i Lendeve**
+- Shtimi, modifikimi dhe fshirja e lendeve
+- Zgjedhja e ngjyrave per organizim me te mire
+- Ruajtja e emrit te profesorit
 
 **Detyrat dhe Provimet**
 - 4 kategori: Provime, Kolokviume, Projekte, Prezantime
-- Çdo detyrë ka titull, përshkrim, lëndë, datë dhe orë
-- Mundësia për t'i shënuar si të përfunduara
-- Filtrim sipas kategorisë, statusit dhe lëndës
+- Cdo detyre ka titull, pershkrim, lende, date dhe ore
+- Mundesite per t'i shenuar si te perfunduara
+- Filtrim sipas kategorise, statusit dhe lendes
 
 **Orari Javor**
-- Shfaqja e leksioneve për çdo ditë të javës
-- Informacione për orën e fillimit/mbarimit, sallën dhe profesorin
-- Layout me kolona për çdo ditë
+- Shfaqja e leksioneve per cdo dite te javes
+- Informacione per oren e fillimit/mbarimit, sallen dhe profesorin
+- Layout me kolona per cdo dite
 
 **Sistemi i Njoftimeve**
-- Alerta automatike bazuar në llojin e detyrës:
-  - Provime dhe Kolokviume: 3 ditë përpara
-  - Projekte: 2 ditë përpara
-  - Prezantime: 1 ditë përpara
-- Ngjyra të ndryshme sipas urgjencës
-- Shfaqje e afateve të kaluara
+- Alerta automatike bazuar ne llojin e detyres:
+  - Provime dhe Kolokviume: 3 dite perpara
+  - Projekte: 2 dite perpara
+  - Prezantime: 1 dite perpara
+- Ngjyra te ndryshme sipas urgjences
+- Shfaqje e afateve te kaluara
 
 ## Skedaret Kryesore
 
-```
-login-app/
-├── src/
-│   ├── components/
-│   │   ├── Auth.jsx              # Faqja e login/signup
-│   │   ├── MainApp.jsx           # Container me navigation
-│   │   ├── Dashboard.jsx         # Dashboard me statistika
-│   │   ├── Courses.jsx           # Menaxhimi i lëndëve
-│   │   ├── Tasks.jsx             # Menaxhimi i detyrave
-│   │   ├── Schedule.jsx          # Orari javor
-│   │   └── Notifications.jsx     # Sistemi i njoftimeve
-│   ├── App.jsx                   # Main component
-│   └── supabaseClient.js         # Konfigurimi i Supabase
-├── SUPABASE_SETUP.md             # SQL queries për database setup
-└── package.json
-```
+login-app/src/components/:
+- Auth.jsx - Faqja e login/signup
+- MainApp.jsx - Container me navigation
+- Dashboard.jsx - Dashboard me statistika
+- Courses.jsx - Menaxhimi i lendeve
+- Tasks.jsx - Menaxhimi i detyrave
+- Schedule.jsx - Orari javor
+- Notifications.jsx - Sistemi i njoftimeve
+
+login-app/src/:
+- App.jsx - Main component
+- supabaseClient.js - Konfigurimi i Supabase
 
 ## Database Schema
 
-Aplikacioni përdor tre tabela në Supabase:
+Aplikacioni perdor tre tabela ne Supabase:
 
-- **courses** - Informacioni për lëndët (emri, profesori, ngjyra)
-- **tasks** - Detyrat dhe provimet (titulli, përshkrimi, lloji, data, statusi)
-- **schedule** - Orari javor (dita, ora fillimit/mbarimit, salla)
+- courses - Informacioni per lendet (emri, profesori, ngjyra)
+- tasks - Detyrat dhe provimet (titulli, pershkrimi, lloji, data, statusi)
+- schedule - Orari javor (dita, ora fillimit/mbarimit, salla)
 
-Të gjitha tabelat kanë Row Level Security (RLS) që siguron që çdo përdorues të shohë vetëm të dhënat e veta.
+Te gjitha tabelat kane Row Level Security (RLS) qe siguron qe cdo perdorues te shoje vetem te dhenat e veta.
 
 ## Gjendja Aktuale
 
-Aplikacioni është funksional dhe gati për përdorim. Të gjitha features kryesore janë implementuar dhe funksionojnë:
+Aplikacioni eshte funksional dhe gati per perdorim. Te gjitha features kryesore jane implementuar:
 - Autentifikimi me Supabase
-- CRUD operations për lëndët, detyrat dhe orarin
+- CRUD operations per lendet, detyrat dhe orarin
 - Sistemi i njoftimeve me alerta automatike
 - Mobile-responsive design
-- Filtrimi dhe kërkimi i të dhënave
+- Filtrimi dhe kerkimi i te dhenave
 
-Për të përdorur aplikacionin, duhet të konfigurosh Supabase credentials në environment variables (SUPABASE_URL dhe SUPABASE_ANON_KEY) dhe të ekzekutosh SQL queries nga SUPABASE_SETUP.md për të krijuar tabelat.
+Per te perdorur aplikacionin duhet te konfigurosh Supabase credentials ne environment variables (SUPABASE_URL dhe SUPABASE_ANON_KEY) dhe te ekzekutosh SQL queries nga SUPABASE_SETUP.md per te krijuar tabelat.
