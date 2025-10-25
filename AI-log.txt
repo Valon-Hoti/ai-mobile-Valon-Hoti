@@ -86,3 +86,15 @@ server: {
   host: '0.0.0.0',
   port: 5173,
 },
+
+
+🧠 Prompt 5:
+"Bej nje aplikacion qe quhet UniTrack, i cili ndihmon studentet te organizojn me mire      orarin, provimet dhe detyrat e tyre..."
+
+-Agjenti me beri disa pyetje per preferencat e mija rreth applikacionit, se si une dua qe aplikacioni te duket dhe qfar opdione dhe funksione do kete, pasi u pergjigja agjenti ndertoi aplikacionin.
+
+
+🧠 Prompt 6:
+
+   
+
