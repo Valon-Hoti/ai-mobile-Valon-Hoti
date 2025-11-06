@@ -44,7 +44,19 @@ UniTrack është një aplikacion web që ndihmon studentët të organizojnë më
 - Ngjyra dhe ikona sipas urgjencës
 - Shfaqje e afateve të kaluara
 
+✅ **Upload Imazhe**
+- Upload të imazheve në Supabase Storage
+- Storage bucket: user_uploads
+- Shfaqje e public URL për çdo imazh të ngarkuar
+- Organizim i skedarëve sipas user_id
+
 ## Recent Changes
+- **Nov 6, 2025**: Shtimi i Upload Feature
+  - Komponenti Upload.jsx për ngarkimin e imazheve
+  - Integrimi me Supabase Storage
+  - Navigation button për Upload section
+  - Setup guide për Supabase Storage bucket
+
 - **Oct 25, 2025**: Ndërtimi i aplikacionit UniTrack
   - Krijimi i database schema në Supabase (courses, tasks, schedule)
   - Ndërtimi i Dashboard-it me overview dhe statistika
@@ -108,6 +120,7 @@ These are automatically injected into the app via `setup-env.sh` script.
 - `src/components/Tasks.jsx`: Tasks and exams management
 - `src/components/Schedule.jsx`: Weekly schedule component
 - `src/components/Notifications.jsx`: Notification system with alerts
+- `src/components/Upload.jsx`: Image upload to Supabase Storage
 - `src/supabaseClient.js`: Supabase client configuration
 
 ### Styling
@@ -123,6 +136,7 @@ These are automatically injected into the app via `setup-env.sh` script.
 - ✏️ Detyrat - Detyrat dhe provimet
 - 📅 Orari - Orari javor
 - 🔔 Njoftime - Sistemi i alertave
+- 📤 Upload - Ngarkimi i imazheve
 
 ## User Preferences
 - Gjuha: Shqip (Albanian)

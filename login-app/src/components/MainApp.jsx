@@ -5,6 +5,7 @@ import Courses from './Courses'
 import Tasks from './Tasks'
 import Schedule from './Schedule'
 import Notifications from './Notifications'
+import Upload from './Upload'
 import './MainApp.css'
 
 export default function MainApp({ session }) {
@@ -30,6 +31,8 @@ export default function MainApp({ session }) {
         return <Schedule session={session} />
       case 'notifications':
         return <Notifications session={session} />
+      case 'upload':
+        return <Upload session={session} />
       default:
         return <Dashboard session={session} onNavigate={setCurrentPage} />
     }
@@ -83,6 +86,14 @@ export default function MainApp({ session }) {
             >
               <span className="nav-icon">🔔</span>
               <span className="nav-label">Njoftime</span>
+            </button>
+
+            <button 
+              className={`nav-item ${currentPage === 'upload' ? 'active' : ''}`}
+              onClick={() => setCurrentPage('upload')}
+            >
+              <span className="nav-icon">📤</span>
+              <span className="nav-label">Upload</span>
             </button>
           </div>
 
