@@ -10,7 +10,7 @@ UniTrack eshte nje aplikacion web qe e kam bere per te ndihmuar studentet te org
 
 - React 18 - Frontend framework
 - Vite - Build tool dhe dev server
-- Supabase - Authentication dhe PostgreSQL database
+- Supabase - Authentication, PostgreSQL database dhe Storage
 - Custom CSS - Styling me mobile-first approach
 
 ## Funksionaliteti Kryesor
@@ -44,6 +44,11 @@ UniTrack eshte nje aplikacion web qe e kam bere per te ndihmuar studentet te org
 - Ngjyra te ndryshme sipas urgjences
 - Shfaqje e afateve te kaluara
 
+**Upload Imazhe**
+- Ngarkimi i imazheve ne Supabase Storage
+- Shfaqje e public URL per cdo imazh te ngarkuar
+- Organizim automatik i skedareve sipas user_id
+
 ## Skedaret Kryesore
 
 login-app/src/components/:
@@ -54,20 +59,25 @@ login-app/src/components/:
 - Tasks.jsx - Menaxhimi i detyrave
 - Schedule.jsx - Orari javor
 - Notifications.jsx - Sistemi i njoftimeve
+- Upload.jsx - Ngarkimi i imazheve
 
 login-app/src/:
 - App.jsx - Main component
 - supabaseClient.js - Konfigurimi i Supabase
 
-## Database Schema
+## Database dhe Storage
 
-Aplikacioni perdor tre tabela ne Supabase:
-
+**Database - Tre tabela ne Supabase:**
 - courses - Informacioni per lendet (emri, profesori, ngjyra)
 - tasks - Detyrat dhe provimet (titulli, pershkrimi, lloji, data, statusi)
 - schedule - Orari javor (dita, ora fillimit/mbarimit, salla)
 
 Te gjitha tabelat kane Row Level Security (RLS) qe siguron qe cdo perdorues te shoje vetem te dhenat e veta.
+
+**Supabase Storage:**
+- Bucket: user_uploads (per imazhe)
+- Organizim i skedareve: {user_id}/{random_number}.{extension}
+- Public access per shfaqjen e imazheve
 
 ## Gjendja Aktuale
 
@@ -75,7 +85,20 @@ Aplikacioni eshte funksional dhe gati per perdorim. Te gjitha features kryesore 
 - Autentifikimi me Supabase
 - CRUD operations per lendet, detyrat dhe orarin
 - Sistemi i njoftimeve me alerta automatike
+- Upload dhe shfaqje e imazheve
 - Mobile-responsive design
 - Filtrimi dhe kerkimi i te dhenave
+
+## Setup
+
+Per te perdorur aplikacionin duhet:
+
+1. Te konfigurosh Supabase credentials ne environment variables:
+   - SUPABASE_URL
+   - SUPABASE_ANON_KEY
+
+2. Te ekzekutosh SQL queries nga SUPABASE_SETUP.md per te krijuar tabelat
+
+3. Te krijosh Storage bucket "user_uploads" ne Supabase (shiko SUPABASE_STORAGE_SETUP.md)
 
 

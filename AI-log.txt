@@ -102,6 +102,14 @@ Sistemi juaj i alertave automatike për afatet e rëndësishme. mos ndryshi gje 
 -Ketu i kerkova agjentit te ndryshoje pamjen e disa teksteve ne aplikacion dhe ai i ndyshoi.
 
 
+ Promt 7:
+  Create a new file named Upload.tsx in my React project.
+  This component should let the user select an image from their device,
+  upload it to Supabase Storage bucket named "user_uploads",
+  and then display the uploaded image using the public URL.
+  Use @supabase/supabase-js and React hooks.
+  The Supabase client is already configured in src/supabaseClient.ts.
 
+  -Agjenti e shtoi opsionin per te bere upload fotografin
    
 
