@@ -88,17 +88,8 @@ Aplikacioni eshte funksional dhe gati per perdorim. Te gjitha features kryesore 
 - Upload dhe shfaqje e imazheve
 - Mobile-responsive design
 - Filtrimi dhe kerkimi i te dhenave
+-  Upload dhe shfaqje e imazheve
 
-## Setup
 
-Per te perdorur aplikacionin duhet:
-
-1. Te konfigurosh Supabase credentials ne environment variables:
-   - SUPABASE_URL
-   - SUPABASE_ANON_KEY
-
-2. Te ekzekutosh SQL queries nga SUPABASE_SETUP.md per te krijuar tabelat
-
-3. Te krijosh Storage bucket "user_uploads" ne Supabase (shiko SUPABASE_STORAGE_SETUP.md)
 
 
